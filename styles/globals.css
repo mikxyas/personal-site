@@ -18,3 +18,18 @@ a {
 * {
   box-sizing: border-box;
 }
+
+
+.aqua::before {
+  content: "";
+  background: linear-gradient(rgba(255, 255, 255, 0.247) 0%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 15px;
+  height: 50%;
+  position: absolute;
+  top: 0px;
+  left: .5%;
+  right: .5%;
+  transition: all ease .3s;
+  width: 99%;
+  pointer-events: none;
+}
