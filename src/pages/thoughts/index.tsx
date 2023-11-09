@@ -1,8 +1,9 @@
 import fs from "fs"
 import Link from "next/link";
 import matter from "gray-matter";
+import { NextApiRequest } from "next";
 
-export const getServerSideProps = (async (context) => {
+export const getServerSideProps = (async () => {
     const folder = './src/pages/thoughts'
     const files = fs.readdirSync(folder);
     // console.log(files)
@@ -30,7 +31,7 @@ export const getServerSideProps = (async (context) => {
 //     return slugs;
 // }
 
-export default function index({ posts }) {
+export default function index({ posts }: any) {
     // const postMetadata = getPostMetadata();
     // const postPreviews = postMetadata.map((slug) => (
     // <div>
@@ -43,7 +44,7 @@ export default function index({ posts }) {
         <div className=" flex flex-col items-center mt-10">
 
             <hr />
-            {posts.map(post => (
+            {posts.map((post: any) => (
                 <div key={post.slug}>
                     <Link href={'thoughts/' + post.slug + '.md'}><p className=" text-lg">{post.title}</p></Link>
                     <hr />

@@ -3,8 +3,9 @@ import { useRouter } from 'next/router';
 import fs from "fs"
 import Markdown from 'markdown-to-jsx';
 import matter from "gray-matter"
+import { NextApiHandler, NextApiRequest } from 'next';
 
-export async function getServerSideProps({ req }) {
+export async function getServerSideProps({ req }: any) {
     const folder = './src/pages/'
     const slug = req.url
     console.log(slug)
