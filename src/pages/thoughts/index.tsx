@@ -44,7 +44,7 @@ export default function index({ posts }) {
 
             <hr />
             {posts.map(post => (
-                <div >
+                <div key={post.slug}>
                     <Link href={'thoughts/' + post.slug + '.md'}><p className=" text-lg">{post.title}</p></Link>
                     <hr />
                 </div>
