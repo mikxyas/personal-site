@@ -6,10 +6,12 @@ import matter from "gray-matter"
 import { NextApiHandler, NextApiRequest } from 'next';
 
 export async function getServerSideProps({ req }: any) {
-    const folder = './src/pages/'
+    const folder = './public/posts'
     const slug = req.url
-    console.log(slug)
-    const file = `${folder}${slug}`
+    const result = slug.replace(/^\/thoughts\//, '');
+
+    console.log(result)
+    const file = `${folder}${'/' + result}`
     const Lcontent = fs.readFileSync(file, "utf-8")
     const content = matter(Lcontent).content
 
