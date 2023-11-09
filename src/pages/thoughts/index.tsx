@@ -5,14 +5,14 @@ import { NextApiRequest } from "next";
 
 
 export const getServerSideProps = (async () => {
-    const folder = './src/posts'
+    const folder = './src/utils'
 
     const files = fs.readdirSync(folder);
     console.log(files)
     const markdownPosts = files.filter((file) => file.endsWith(".md"));
 
     const posts = markdownPosts.map((filename) => {
-        const fileContents = fs.readFileSync(`./src/posts/${filename}`, "utf-8")
+        const fileContents = fs.readFileSync(`./src/utils/${filename}`, "utf-8")
         const matterResult = matter(fileContents);
         return {
             title: matterResult.data.title,
