@@ -3,14 +3,16 @@ import Link from "next/link";
 import matter from "gray-matter";
 import { NextApiRequest } from "next";
 
+
 export const getServerSideProps = (async () => {
-    const folder = './posts'
+    const folder = './src/posts'
+
     const files = fs.readdirSync(folder);
     console.log(files)
     const markdownPosts = files.filter((file) => file.endsWith(".md"));
 
     const posts = markdownPosts.map((filename) => {
-        const fileContents = fs.readFileSync(`./posts/${filename}`, "utf-8")
+        const fileContents = fs.readFileSync(`./src/posts/${filename}`, "utf-8")
         const matterResult = matter(fileContents);
         return {
             title: matterResult.data.title,
