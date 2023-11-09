@@ -29,11 +29,11 @@ export default function Navbar() {
                                 About
                             </li>
                         </Link>
-                        <Link href={'/thoughts'}>
+                        {/* <Link href={'/thoughts'}>
                             <li className='cursor-pointer '>
                                 blog
                             </li>
-                        </Link>
+                        </Link> */}
                         <Link href={'/goal'}>
                             <li className='cursor-pointer'>
                                 Goal
