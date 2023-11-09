@@ -6,7 +6,7 @@ import matter from "gray-matter"
 import { NextApiHandler, NextApiRequest } from 'next';
 
 export async function getServerSideProps({ req }: any) {
-    const folder = './public/posts'
+    const folder = './posts'
     const slug = req.url
     const result = slug.replace(/^\/thoughts\//, '');
 
