@@ -19,7 +19,7 @@ export default function Navbar() {
             <div>
                 <Link href={'/'}>
                     <div ref={ref} >
-                        <h1 className='text-2xl lg:text-4xl mb-5'>Building tech that changes the fucking world (e/acc)</h1>
+                        <h1 className='text-2xl lg:text-4xl mb-5'></h1>
                     </div>
                 </Link>
                 <div className=''>
