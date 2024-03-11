@@ -1,3 +1,84 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: RedOctober;
+    src: url('../fonts/Red\ October.ttf');
+}
+
+/* body {
+    font-family: 'RedOctoberEroded';
+} */
+
+.mainbg {
+    background-color: #F0D7AE;
+}
+
+.mainTitle {
+    font-size: 53px;
+}
+
+.mainDesc {
+    font-size: 20px;
+}
+
+.subTitle {
+    font-size: 32px;
+}
+
+.cert-container {
+    width: 100%;
+    /* background-color: #F0D7AE; */
+    overflow-x: auto;
+}
+
+.cert-card {
+    background-color: rgba(255, 0, 0, 0.49);
+    border-radius: 13px;
+    padding-top: 10px;
+    padding-bottom: 13px;
+    padding-left: 12px;
+    padding-right: 10px;
+    width: 196px;
+
+}
+
+.epic-font {
+    font-family: RedOctober;
+}
+
+/* Media query for mobile screens */
+@media only screen and (max-width: 768px) {
+    .mainTitle {
+        font-size: 30px;
+        /* Adjust font size for mobile */
+    }
+
+    .mainDesc {
+        font-size: 16px;
+        /* Adjust font size for mobile */
+    }
+
+    .subTitle {
+        font-size: 24px;
+        /* Adjust font size for mobile */
+    }
+}
+
+.cont-container {
+    border-radius: 43px;
+    height: 95vh;
+    width: 95vw;
+
+}
+
+.project-card {
+    background-color: rgba(255, 0, 0, 0.49);
+    border-radius: 13px;
+    padding-top: 7px;
+    padding-bottom: 13px;
+    padding-left: 12px;
+    padding-right: 10px;
+    width: fit-content;
+}
