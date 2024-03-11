@@ -7,29 +7,44 @@ const inter = Inter({ subsets: ['latin'] })
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import XIcon from '@mui/icons-material/X';
+import { motion } from 'framer-motion'
 
 export default function Home() {
 
   return (
+
     <div className='flex mainbg items-center justify-center flex-col h-screen w-screen'>
-      <div className='flex text-white p-8 lg:p-0 lg:pl-28 lg:pt-20 cont-container flex-col bg-black'>
-        <div>
-          <h1 className='epic-font  mainTitle'>MIKIYAS AYELE</h1>
-          <h3 className='epic-font mainDesc mb-3'>FULL STACK DEVELOPER</h3>
-          <div className='gap-3 mt-2 flex'>
-            <GitHubIcon />
-            <LinkedInIcon />
-            <XIcon />
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        <div className='flex text-white p-8 lg:p-0 lg:pl-28 lg:pt-20 cont-container flex-col bg-black'>
+          <div>
+
+            <h1 className='epic-font  mainTitle'>MIKIYAS AYELE</h1>
+
+
+            <h3 className='epic-font mainDesc mb-3'>FULL STACK DEVELOPER</h3>
+            <div className='gap-3 mt-2 flex'>
+              <GitHubIcon />
+              <LinkedInIcon />
+              <XIcon />
+            </div>
           </div>
-        </div>
-        <div className='mt-10'>
-          <h1 className=' text-4xl subTitle epic-font'>PROJECTS</h1>
-          <div className='project-card mt-5'>
-            <h1 className='flex items-center epic-font text-3xl subTitle justify-between'><span>BOOKNOTE</span><GitHubIcon /></h1>
-            <h3 className='mainDesc'>Web app that helps you track your reading notes</h3>
+          <div className='mt-10'>
+            <h1 className=' text-4xl subTitle epic-font'>PROJECTS</h1>
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <div className='project-card mt-5'>
+                <h1 className='flex items-center epic-font text-3xl subTitle justify-between'><span>BOOKNOTE</span><GitHubIcon /></h1>
+                <h3 className='mainDesc'>Web app that helps you track your reading notes</h3>
+              </div>
+            </motion.button>
           </div>
-        </div>
-        {/* <div className='mt-10'>
+          {/* <div className='mt-10'>
           <h1 className=' text-4xl subTitle epic-font'>CERTIFICATIONS</h1>
           <div className='flex   mt-7 cert-container' >
             <div className='cert-card flex justify-center flex-col  items-center'>
@@ -48,7 +63,9 @@ export default function Home() {
             </div>
           </div>
         </div> */}
-      </div>
+        </div>
+      </motion.div>
     </div >
+
   )
 }

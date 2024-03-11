@@ -12,8 +12,14 @@
 } */
 
 .mainbg {
+    /* background-image: url('../../public/bird.jpg'); */
     background-color: #F0D7AE;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
 }
+
 
 .mainTitle {
     font-size: 53px;
@@ -70,6 +76,8 @@
     border-radius: 43px;
     height: 95vh;
     width: 95vw;
+
+
 
 }
 
